@@ -2,7 +2,6 @@
 *.pyc
 .Python
 bin
-db
 include
 lib
 .idea
