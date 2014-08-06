@@ -13,6 +13,6 @@ Use this as the base for your Django project.
     
 Add the following to _bin/activate_:
 
-    `IFS=$'\n'; for l in $(cat $VIRTUAL_ENV/.env); do eval export echo $l; done`
+    IFS=$'\n'; for l in $(cat $VIRTUAL_ENV/.env); do eval export echo $l; done
     
 This will automatically load the _.env_ settings when entering the virtual environment.
