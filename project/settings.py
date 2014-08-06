@@ -1,5 +1,5 @@
 """
-Django settings for example project.
+Django settings for project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -34,9 +34,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'example.urls'
+ROOT_URLCONF = 'project.urls'
 
-WSGI_APPLICATION = 'example.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -61,7 +61,7 @@ MEDIA_URL = '/media/'
 
 # Settings from .env (optional load)
 from dj_database_url import config as db_config
-DATABASES = {'default': db_config(default='sqlite://localhost//%s' % os.path.join(BASE_DIR, 'db', 'example.sqlite3'))}
+DATABASES = {'default': db_config(default='sqlite://localhost//%s' % os.path.join(BASE_DIR, 'db', 'project.sqlite3'))}
 TIME_ZONE = os.environ.setdefault('TIME_ZONE', "Australia/Sydney")
 EMAIL_HOST = os.environ.setdefault('EMAIL_HOST', 'mail.voltgrid.com')
 EMAIL_PORT = 25
