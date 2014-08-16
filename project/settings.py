@@ -78,5 +78,5 @@ TEMPLATE_DEBUG = DEBUG
 try:
     SECRET_KEY = os.environ['SECRET_KEY']
 except KeyError:
-    print "Warning: settings.SECRET_KEY is not set!"
+    print("Warning: settings.SECRET_KEY is not set!")
     pass
