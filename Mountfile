@@ -1,2 +1,2 @@
-www/media: www/media
-www/static: www/static
+www/media : www/media
+ephemeral : www/static
