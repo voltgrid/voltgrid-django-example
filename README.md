@@ -1,6 +1,6 @@
-# Sample Django Project
+# Example Django Project
 
-This is a sample Django project ready to deploy on [Volt Grid](http://www.voltgrid.com).
+This is a example Django project ready to deploy on [Volt Grid](http://www.voltgrid.com).
 
 Use this as the base for your Django project.
 
