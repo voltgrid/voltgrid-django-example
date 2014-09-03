@@ -1,5 +1,5 @@
 # App
-Django==1.6.6
+Django
 # Deployment
 bureaucrat
 dj-database-url==0.3.0
