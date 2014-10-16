@@ -70,6 +70,8 @@ DATABASES = {'default': db_config(default='sqlite://localhost//%s' % os.path.joi
 TIME_ZONE = os.environ.setdefault('TIME_ZONE', "Australia/Sydney")
 EMAIL_HOST = os.environ.setdefault('EMAIL_HOST', 'mail.voltgrid.com')
 EMAIL_PORT = 25
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
 ADMINS = ()
 for admin in os.environ.get('ADMINS', '').split():
