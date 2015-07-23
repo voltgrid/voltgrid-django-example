@@ -4,4 +4,4 @@ Django
 bureaucrat
 dj-database-url==0.3.0
 dj-static==0.0.6
-gunicorn==19.1.0
+gunicorn==19.3.0
