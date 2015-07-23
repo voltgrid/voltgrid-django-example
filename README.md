@@ -14,13 +14,15 @@ Create a virtual environment. [Python Bootstrap](https://github.com/adlibre/pyth
 
 Clone this repo to the base of your newly created virtual environment.
 
-### Step 2: Initialise the app
+### Step 3: Initialise the app
 
 After entering the virtual environment. Run the following:
 
     pip install bureaucrat
     cp .env.example .env  # edit as required
     bureaucrat init
+
+Running `bureaucrat init` will run the deployment steps, and start the app.
 
 Optionally: Add the following to _bin/activate_:
 
