@@ -1,10 +1,16 @@
 # Example Django Project
 
-This is a example Django project ready to deploy on [Volt Grid](http://www.voltgrid.com).
+This is a example Django project that utilises [Bureaucrat](https://pypi.python.org/pypi/bureaucrat) for initialisation.
 
-Use this as the base for your Django project.
+It is ready to deploy in the [Python-Bureaucrat](https://registry.hub.docker.com/u/panubo/python-bureaucrat/) Docker container.
 
 ## Install
+
+### Step 1: Clone this repo 
+
+Clone this repo to the base of your virtual environment.
+
+### Step 2: Initialise the app
 
     pip install bureaucrat
     cp .env.example .env  # edit as required
