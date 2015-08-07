@@ -65,11 +65,28 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'www', 'media')
 MEDIA_URL = '/media/'
 
 # Settings from .env (optional load)
-from dj_database_url import config as db_config
-DATABASES = {'default': db_config(default='sqlite://localhost//%s' % os.path.join(BASE_DIR, 'db', 'project.sqlite3'))}
+if os.environ.get('DATABASE_NAME') and os.environ.get ('DATABASE_USER'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('DATABASE_NAME'),
+            'USER': os.environ.get('DATABASE_USER'),
+            'PASSWORD': os.environ.setdefault('DATABASE_PASS', ''),
+            'HOST': os.environ.setdefault('DATABASE_HOST', 'localhost'),
+            'PORT': os.environ.setdefault('DATABASE_PORT', '3306'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db', 'project.sqlite3'),
+        }
+    }
+
 TIME_ZONE = os.environ.setdefault('TIME_ZONE', "Australia/Sydney")
-EMAIL_HOST = os.environ.setdefault('EMAIL_HOST', 'mail.voltgrid.com')
-EMAIL_PORT = 25
+EMAIL_HOST = os.environ.setdefault('EMAIL_HOST', 'localhost')
+EMAIL_PORT = int(os.environ.setdefault('EMAIL_PORT', '25'))
 SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
