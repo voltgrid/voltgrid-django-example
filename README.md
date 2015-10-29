@@ -4,6 +4,13 @@ This is a example Django project that utilises [Bureaucrat](https://pypi.python.
 
 It is also ready to deploy in the [Python-Bureaucrat](https://registry.hub.docker.com/u/panubo/python-bureaucrat/) Docker container.
 
+## Docker
+
+```
+docker build -t example .
+docker run -t -i -e SECRET_KEY=foo -e WORKERS=4 -e LOGFILE=/srv/log/foo.log -e PORT=8000 example
+```
+
 ## Local Install
 
 ### Step 1: Create a virtual environment
